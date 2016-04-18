@@ -1,0 +1,17 @@
+{
+  "author": "Linwb",
+  "name": "poker",
+  "description": "poker for Texas Holdem poker",
+  "version": "0.0.1",
+  "homepage": "https://github.com/linwb/poker",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/linwb/poker.git"
+  },
+  "main": "test.js",
+  "engines": {
+    "node": "5.1.1"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
