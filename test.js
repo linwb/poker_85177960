@@ -10,13 +10,9 @@ var PokerType = poker.PokerType;
 describe('poker.Card', function(){
     describe('#new Card()', function(){
         it("Card's instance must via new", function(){
-            try{
+            assert.throws(function () {
                 Card();
-            } catch (e){
-                assert.equal(true, !!e);
-                return;
-            }
-            assert.equal(true,false);
+            });
         })
         it('should return card with value {0,0} when new Card()', function(){
             assert.equal(0, new Card().value);
@@ -349,6 +345,14 @@ describe('poker.Cards', function(){
             ]);
             var c = cards1.toMaxFiveEntity();
             assert.equal(true, c.pokerType == PokerType.STRAIGHT_FLUSH);
+        });
+        it('it must be return true from 6 cards',function(){
+            var cards1 = new Cards([
+                new Card(7,4),new Card(3,3),new Card(4,4),new Card(5,4),new Card(6,4),new Card(5,4)
+            ]);
+            var c = cards1.toMaxFiveEntity();
+            console.log(c)
+            assert.equal(true, c.pokerType == PokerType.FLUSH);
         });
     });
 });
